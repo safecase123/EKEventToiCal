@@ -69,6 +69,7 @@
     {
         icalRepresentation = [event iCalString];
         [ical appendString:[NSString stringWithFormat:@"\r%@",icalRepresentation]];
+      
     }
     NSLog(@"iCal : %@",ical);
     
