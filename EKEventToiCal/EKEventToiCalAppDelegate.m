@@ -68,11 +68,13 @@
     for (EKEvent *event in events) {
         icalRepresentation = [event iCalString]; 
 
-        [ical appendString:icalRepresentation];
+        [ical appendString:[NSString stringWithFormat:@"\r%@",icalRepresentation]];
       
     }
-    NSLog(ical);
-    [ical writeToFile:@"myfile.ics" atomically:NO encoding:NSUTF8StringEncoding error: nil];
+    NSLog(@"iCal : %@",ical);
+    
+    [ical writeToFile:@"icalEvents.ics" atomically:NO encoding:NSUTF8StringEncoding error: nil];
+    
     return YES;
 }
 

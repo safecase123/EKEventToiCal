@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A222AE61AB6E4A10022A09A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A222AE51AB6E4A10022A09A /* Default-568h@2x.png */; };
 		37CB95A9139E8FEA0053AE30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CB95A8139E8FEA0053AE30 /* UIKit.framework */; };
 		37CB95AB139E8FEA0053AE30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CB95AA139E8FEA0053AE30 /* Foundation.framework */; };
 		37CB95AD139E8FEA0053AE30 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CB95AC139E8FEA0053AE30 /* CoreGraphics.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A222AE51AB6E4A10022A09A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		37CB95A4139E8FEA0053AE30 /* EKEventToiCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EKEventToiCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CB95A8139E8FEA0053AE30 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37CB95AA139E8FEA0053AE30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +95,7 @@
 		37CB9599139E8FEA0053AE30 = {
 			isa = PBXGroup;
 			children = (
+				2A222AE51AB6E4A10022A09A /* Default-568h@2x.png */,
 				37CB95AE139E8FEA0053AE30 /* EKEventToiCal */,
 				37CB95D3139E8FEB0053AE30 /* EKEventToiCalTests */,
 				37CB95A7139E8FEA0053AE30 /* Frameworks */,
@@ -222,13 +225,16 @@
 			name = EKEventToiCalTests;
 			productName = EKEventToiCalTests;
 			productReference = 37CB95CD139E8FEB0053AE30 /* EKEventToiCalTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		37CB959B139E8FEA0053AE30 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+			};
 			buildConfigurationList = 37CB959E139E8FEA0053AE30 /* Build configuration list for PBXProject "EKEventToiCal" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -253,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37CB95B3139E8FEA0053AE30 /* InfoPlist.strings in Resources */,
+				2A222AE61AB6E4A10022A09A /* Default-568h@2x.png in Resources */,
 				37CB95C0139E8FEA0053AE30 /* MainWindow_iPhone.xib in Resources */,
 				37CB95C7139E8FEB0053AE30 /* MainWindow_iPad.xib in Resources */,
 			);
@@ -355,16 +362,16 @@
 		37CB95DE139E8FEB0053AE30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,13 +380,12 @@
 		37CB95DF139E8FEB0053AE30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,6 +401,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EKEventToiCal/EKEventToiCal-Prefix.pch";
 				INFOPLIST_FILE = "EKEventToiCal/EKEventToiCal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,6 +415,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EKEventToiCal/EKEventToiCal-Prefix.pch";
 				INFOPLIST_FILE = "EKEventToiCal/EKEventToiCal-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

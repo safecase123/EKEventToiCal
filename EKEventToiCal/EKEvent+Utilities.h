@@ -10,11 +10,6 @@
 #import <EventKit/EventKit.h>
 
 @interface EKEvent (Utilities)
-
  -(NSString *)genRandStringLength;
-
-
- -(NSMutableString*)iCalString;
-
-
+ -(NSString*)iCalString;
 @end
