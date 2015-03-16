@@ -65,11 +65,10 @@
     NSString *icalRepresentation = [NSString string];
 
     NSMutableString *ical = [NSMutableString string];
-    for (EKEvent *event in events) {
-        icalRepresentation = [event iCalString]; 
-
+    for (EKEvent *event in events)
+    {
+        icalRepresentation = [event iCalString];
         [ical appendString:[NSString stringWithFormat:@"\r%@",icalRepresentation]];
-      
     }
     NSLog(@"iCal : %@",ical);
     
